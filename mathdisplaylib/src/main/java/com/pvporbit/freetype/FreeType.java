@@ -207,7 +207,7 @@ public class FreeType {
 
     static { // Load library
         try {
-            System.loadLibrary("main");
+            System.loadLibrary("freetype");
 					/*
 			if (System.getProperty("os.name").toLowerCase().indexOf("win") >= 0) {
 				int bits = 86;

@@ -1,10 +1,7 @@
-
-
-
 cmake_minimum_required(VERSION 3.4.1)
 
 add_library( # Sets the name of the library.
-             main
+             freetype
 
              # Sets the library as a shared library.
              SHARED
@@ -16,6 +13,6 @@ add_library( # Sets the name of the library.
              )
 
 find_package(cdep-dependencies REQUIRED)
-add_all_cdep_dependencies(main)
+add_all_cdep_dependencies(freetype)
 
-target_link_libraries(main log android)
+target_link_libraries(freetype log android)
