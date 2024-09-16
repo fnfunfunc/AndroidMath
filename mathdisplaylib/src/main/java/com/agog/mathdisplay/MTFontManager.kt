@@ -44,13 +44,13 @@ class MTFontManager {
             return fontWithName("latinmodern-math", size)
         }
 
-        fun xitsFontWithSize(size: Float): MTFont? {
-            return fontWithName("xits-math", size)
-        }
-
-        fun termesFontWithSize(size: Float): MTFont? {
-            return fontWithName("texgyretermes-math", size)
-        }
+//        fun xitsFontWithSize(size: Float): MTFont? {
+//            return fontWithName("xits-math", size)
+//        }
+//
+//        fun termesFontWithSize(size: Float): MTFont? {
+//            return fontWithName("texgyretermes-math", size)
+//        }
 
         fun defaultFont(): MTFont? {
             return latinModernFontWithSize(KDefaultFontSize)
