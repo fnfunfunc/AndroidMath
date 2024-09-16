@@ -1,6 +1,8 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'maven-publish'
+plugins {
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.library)
+    id("maven-publish")
+}
 
 group='com.github.gregcockroft'
 
@@ -42,16 +44,25 @@ android {
     }
     ndkVersion "23.1.7779620"
     namespace 'com.agog.mathdisplay'
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation(libs.androidx.appcompat)
+//    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'junit:junit:4.13.2'
     implementation 'androidx.annotation:annotation:1.7.0'
     implementation 'androidx.test:runner:1.5.2'
     implementation 'androidx.test:rules:1.5.0'
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.github.jitpack:gradle-simple:1.0'
 }
 repositories {
