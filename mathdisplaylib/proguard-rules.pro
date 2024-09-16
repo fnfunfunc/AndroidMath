@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keep class com.agog.mathdisplay.*
+-keep class com.agog.mathdisplay.render.*
+-keep class com.pvporbit.freetype.GlyphSlot$Advance
+-dontwarn java.lang.invoke.StringConcatFactory
