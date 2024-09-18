@@ -20,6 +20,7 @@ android {
             cmake {
                 arguments "-Dcdep-dependencies_DIR=../../../.cdep/modules"
                 arguments "-DANDROID_STL=c++_shared"
+                arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
         }
     }
@@ -42,7 +43,7 @@ android {
             path 'src/main/cpp/CMakeLists.txt'
         }
     }
-    ndkVersion "23.1.7779620"
+    ndkVersion "27.1.12297006"
     namespace 'com.agog.mathdisplay'
 
     compileOptions {
